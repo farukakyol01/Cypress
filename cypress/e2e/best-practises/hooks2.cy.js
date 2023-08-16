@@ -30,7 +30,8 @@ cy.fixture('ConduitCSV.csv')
         
         cy.contains('Sign in').click()
         cy.get('input[type="email"]').type(table[0].email)
-        cy.get('input[type="password"]').type(table[0].password)
+        //cy.get('input[type="password"]').type(table[0].password)
+        cy.xpath('//input[@type="password"]').type(table[0].password)
         cy.get('button[type="submit"]').click()
         
 

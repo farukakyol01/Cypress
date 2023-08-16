@@ -8,11 +8,11 @@ describe('Hooks2 test',function(){
     beforeEach(function(){
         cy.fixture('ConduitData').as('data')
 
-cy.fixture('ConduitCSV.csv')
-    .then(neatcsv)
-        .then(data =>{
-            table=data
-        })
+//cy.fixture('ConduitCSV.csv')
+ //   .then(neatcsv)
+ //       .then(data =>{
+ //           table=data
+  //      })
         cy.visit('https://react-redux.realworld.io/')
     })
  
@@ -25,8 +25,15 @@ cy.fixture('ConduitCSV.csv')
        
         
     })
- 
-    it('Conduit - Invalid Credentials',function(){
+    it('Custom Command',function(){
+        cy.contains('Sign in').click()
+        cy.conduitLogin(this.data.email,this.data.password)
+        
+        
+       
+        
+    })
+    it.skip('Conduit - Invalid Credentials',function(){
         
         cy.contains('Sign in').click()
         cy.get('input[type="email"]').type(table[0].email)

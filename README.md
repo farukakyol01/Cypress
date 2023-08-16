@@ -34,3 +34,11 @@ package.json
 npm run open
 npm run test-electron
 
+
+for reporting 
+-----------------
+
+npm i --save-dev cypress-mochawesome-reporter
+
+
+

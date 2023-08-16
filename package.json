@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "open" : "cypress open",
-    "test-electron" : "cypress run",
-    "smoke-test" : "cypress run --spec \"cypress/e2e/best-practises/hooks2.cy.js\"",
-    "smoke-test2" : "cypress run --spec \"cypress/e2e/best-practises/*.cy.js\"",
+    "open": "cypress open",
+    "test-electron": "cypress run",
+    "smoke-test": "cypress run --spec \"cypress/e2e/best-practises/hooks2.cy.js\"",
+    "smoke-test2": "cypress run --spec \"cypress/e2e/best-practises/*.cy.js\"",
     "test-electron headed": "cypress run --headed",
     "test-chrome": "cypress run --browser chrome",
     "test-chrome headed": "cypress run --browser chrome --headed"
@@ -19,6 +19,7 @@
     "cypress": "^12.17.4"
   },
   "devDependencies": {
+    "cypress-mochawesome-reporter": "^3.5.1",
     "cypress-xpath": "^2.0.1",
     "neat-csv": "^5.2.0"
   }

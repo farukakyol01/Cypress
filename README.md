@@ -25,4 +25,12 @@ cypress open -> open
 	npm run smoke-test
 
 
+------------------
+
+npx cypress run
+
+package.json
+
+npm run open
+npm run test-electron
 

@@ -1,0 +1,5 @@
+{
+  "email": "cypressdemo@gmail.com",
+  "password": "cypressdemo",
+  "passwordWrong": "Fixtures are a great way to mock data for responses to routes"
+}

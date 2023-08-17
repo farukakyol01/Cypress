@@ -46,7 +46,7 @@ describe('Hooks2 test',function(){
         loginPage.enterEmail(this.data.email)
         loginPage.enterPassword(this.data.password)
         cy.get('button[type="submit"]').click()
-        
+        //Faruk
        
         
     })

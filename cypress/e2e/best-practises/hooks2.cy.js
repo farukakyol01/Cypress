@@ -1,9 +1,15 @@
 /// <reference types="Cypress"/>
-const neatcsv=require('neat-csv')
+const neatcsv=require('neat-csv');
+//const { default: LandingPage } = require('../Pages/landingpage');
 
+import LandingPage from '../Pages/landingpage';
+import LoginPage from '../Pages/loginpage';
 
 
 describe('Hooks2 test',function(){
+
+    const landingPage = new LandingPage()
+    const loginPage=new LoginPage()
  var table;
     beforeEach(function(){
         cy.fixture('ConduitData').as('data')
@@ -33,6 +39,19 @@ describe('Hooks2 test',function(){
        
         
     })
+
+    it('POM Practises',function(){
+
+        landingPage.clickSigninButton()
+        loginPage.enterEmail(this.data.email)
+        loginPage.enterPassword(this.data.password)
+        cy.get('button[type="submit"]').click()
+        
+       
+        
+    })
+
+
     it.skip('Conduit - Invalid Credentials',function(){
         
         cy.contains('Sign in').click()
